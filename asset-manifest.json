@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Tapia805/Pureba-apptareas/static/css/main.5a645ac5.css",
+    "main.js": "/Tapia805/Pureba-apptareas/static/js/main.e1c62c22.js",
+    "index.html": "/Tapia805/Pureba-apptareas/index.html",
+    "static/media/delete.svg": "/Tapia805/Pureba-apptareas/static/media/delete.67697f56fd2f149bc9515a879062ad5c.svg",
+    "static/media/check.svg": "/Tapia805/Pureba-apptareas/static/media/check.23109d14544b9bb9b3d5d4e65ea13701.svg",
+    "main.5a645ac5.css.map": "/Tapia805/Pureba-apptareas/static/css/main.5a645ac5.css.map",
+    "main.e1c62c22.js.map": "/Tapia805/Pureba-apptareas/static/js/main.e1c62c22.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a645ac5.css",
+    "static/js/main.e1c62c22.js"
+  ]
+}
