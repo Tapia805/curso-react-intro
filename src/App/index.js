@@ -1,12 +1,96 @@
-import React from 'react';
-import { AppUI } from './AppUI';
-import { TodoProvider } from '../TodoContext';
+import React from "react";
+import { useTodos } from "./useTodos";
+import { TodoHeader } from "../TodoHeader";
+import { TodoCounter } from "../TodoCounter";
+import { TodoSearch } from "../TodoSearch";
+import { TodoList } from "../TodoList";
+import { TodoItem } from "../TodoItem";
+import { TodosError } from "../TodosError";
+import { TodosLoading } from "../TodosLoading";
+import { EmptyTodos } from "../EmptyTodos";
+import { TodoForm } from "../TodoForm";
+import { CreateTodoButton } from "../CreateTodoButton";
+import { Modal } from "../Modal";
+import { ChangeAlert } from "../ChangeAlert";
 
 function App() {
-   return(
-    <TodoProvider>
-      <AppUI />
-    </TodoProvider>
+  const {
+    error,
+    loading,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+    openModal,
+    setOpenModal,
+    totalTodos,
+    completedTodos,
+    searchValue,
+    setsearchValue,
+    addTodo,
+    sincronizeTodos,
+  } = useTodos();
+
+  return(
+    <>
+      <TodoHeader loading={loading}>
+        <TodoCounter
+          totalTodos={totalTodos}
+          completedTodos={completedTodos}
+        />
+
+        <TodoSearch
+          searchValue={searchValue}
+          setsearchValue={setsearchValue}
+        />
+
+      </TodoHeader>
+
+      <TodoList
+        error={error}
+        loading={loading}
+        totalTodos={totalTodos}
+        searchedTodos={searchedTodos}
+        searchText={searchValue}
+        onError={() => <TodosError />}
+        onLoading={() => <TodosLoading />}
+        onEmptyTodos={() => <EmptyTodos />}
+        onEmptySearchResults={(searchText) => <p>No hay resultados para {searchText}</p>}
+        // render={todo => (          
+         // <TodoItem 
+           // key={todo.text}
+           // text={todo.text} 
+           // completed={todo.completed} 
+           // onComplete={() => completeTodo(todo.text)}
+           // onDelete={() => deleteTodo(todo.text)} 
+         // />
+        // )}
+      >
+        {todo => (          
+         <TodoItem 
+           key={todo.text}
+           text={todo.text} 
+           completed={todo.completed} 
+           onComplete={() => completeTodo(todo.text)}
+           onDelete={() => deleteTodo(todo.text)} 
+         />
+        )}
+      </TodoList>
+
+    <CreateTodoButton setOpenModal={setOpenModal}/>
+
+    {openModal && (
+      <Modal>
+        <TodoForm
+          addTodo={addTodo}
+          setOpenModal={setOpenModal}
+        /> 
+      </Modal>
+    )}
+
+    <ChangeAlert
+      sincronize={sincronizeTodos}
+    />
+  </>
   );
 }
 

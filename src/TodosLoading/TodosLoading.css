@@ -42,8 +42,8 @@
 .LoadingTodo-deleteIcon {
     background: linear-gradient(
         90deg,
-      rgba(250, 250, 250, 1),
-      rgb(149, 149, 149)
+      rgb(242, 242, 242),
+      rgb(164, 163, 253)
     );
     background-size: 400% 400%;
     animation: loadingAnimation 3s ease-in-out infinite;

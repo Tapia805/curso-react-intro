@@ -1,5 +1,8 @@
 .TodoItem{
-    background-color:#fafafa;
+    border-radius:2px;
+    border:2px solid #202329;
+    
+    background-color: rgb(208, 123, 62);
     position:relative;
     display:flex;
     justify-content:center;
@@ -8,12 +11,15 @@
     box-shadow:0 5px 50px rgba(32,35,41,.15);
 }
 
+
 .TodoItem-p{
+    color: black;
+
     margin:24px 0 24px 24px;
     width:calc(100% - 120px);
-    font-size:18px;
+    font-size: 20px;
     line-height:24px;
-    font-weight:400;
+    font-weight: 500;
 }
 
 .TodoItem-p--complete{

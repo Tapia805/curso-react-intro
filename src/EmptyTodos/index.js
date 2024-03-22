@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 function EmptyTodos(){
 
     return(
-        <p>¡Crea tu primer TODOs!</p>
+        <p>¡Crea tu primer Tarea!</p>
     );
   }
 

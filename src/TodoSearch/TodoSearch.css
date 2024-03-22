@@ -1,5 +1,5 @@
 .TodoSearch{
-    background:#f9fbfc;
+    background:#f5f5f5;
     border-radius:2px;
     border:2px solid #202329;
     margin:0 24px;
@@ -10,15 +10,19 @@
     font-family:montserrat;
     font-weight:400;
     color:#1e1e1f;
-    box-shadow:0 5px 50px rgba(32,35,41,.25);
+    box-shadow:0 5px 50px rgba(255, 255, 255, 0.893);
 }
 
 .TodoSearch::placeholder{
-    color:#a5a5a5;
+    color:#414141;
     font-family:montserrat;
     font-weight:400;
 }
 
 .TodoSearch:focus{
     outline-color:#61dafa;
+}
+
+.TodoSearch:disabled {
+    opacity: 25%;
 }

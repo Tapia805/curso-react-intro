@@ -1,7 +1,11 @@
 .TodoCounter{
+    background: #001F3F;
+    border-radius:2px;
+    border:1px solid black;
+    
     font-size: 24px;
     text-align: center;
-    margin: 0;
+    margin-top: 0;
     padding: 48px;
     font-weight: 400;
 }
@@ -9,3 +13,18 @@
 .TodoCounter span{
     font-weight:700
 }
+
+.TodoCounter--loading {
+    border: black;
+    background: linear-gradient(
+        90deg,
+      rgb(242, 242, 242),
+      rgb(164, 163, 253)
+    );
+    background-size: 400% 400%;
+    animation: loadingAnimation 3s ease-in-out infinite;
+}
+
+ h1 {
+    color: #ffffff;
+ }
